@@ -1,0 +1,15 @@
+{
+  "name": "news360-docker",
+  "version": "1.0.0",
+  "description": "News360 test on Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Dercilio Fontes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
