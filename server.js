@@ -1,6 +1,14 @@
 'use strict';
 
 const express = require('express');
+const processData = require('process-data')
+
+// CSV file source
+const inputFileCSV = './data/data-reduced.csv';
+
+// Call process of data csv to DB
+processData.processDataCSV(inputFileCSV);
+
 
 // Constants
 const PORT = 8080;
