@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DercilioFontes/news-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DercilioFontes/news-project/issues"
+  },
+  "homepage": "https://github.com/DercilioFontes/news-project#readme"
 }
