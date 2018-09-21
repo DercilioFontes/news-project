@@ -45,6 +45,8 @@ http://postgresguide.com/utilities/psql.html
 
 https://medium.com/@HalahSalih/project-settings-for-an-express-app-with-knex-16959517b53b
 
+http://www.dancorman.com/knex-your-sql-best-friend/
+
 ## PostgreSQL (pg)
 
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546

@@ -1,13 +1,11 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('visits', (table) => {
-    table.increments();
+    table.increments(); // id serial primary key
     table.integer('datetime');
     table.bigInteger('user');
     table.integer('os');
     table.integer('device');
-    table.timestamp('created_at').defaultTo(knex.fn.now());
-    table.timestamp('updated_at').defaultTo(knex.fn.now());
   });
 };
 
