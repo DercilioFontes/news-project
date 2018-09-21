@@ -39,6 +39,12 @@ https://gist.github.com/NigelEarle/80150ff1c50031e59b872baf0e474977
 
 https://gist.github.com/NigelEarle/70db130cc040cc2868555b29a0278261
 
+https://devhints.io/knex
+
+http://postgresguide.com/utilities/psql.html
+
+https://medium.com/@HalahSalih/project-settings-for-an-express-app-with-knex-16959517b53b
+
 ## PostgreSQL (pg)
 
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546

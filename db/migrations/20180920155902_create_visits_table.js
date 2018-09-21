@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('visits', (table) => {
     table.increments();
     table.integer('datetime');
-    table.integer('user');
+    table.bigInteger('user');
     table.integer('os');
     table.integer('device');
     table.timestamp('created_at').defaultTo(knex.fn.now());
