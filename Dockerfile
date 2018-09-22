@@ -11,9 +11,12 @@ COPY package*.json ./
 RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
+RUN knex --knexfile=../knexfile.js migrate:latest
+RUN knex --knexfile=../knexfile.js seed:run
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8080
+
 CMD [ "npm", "start" ]

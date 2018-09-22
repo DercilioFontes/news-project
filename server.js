@@ -55,11 +55,13 @@ app.get('/unique-users', (req, res) => {
 app.get('/loyal-users', (req, res) => {
 
   // Check if there is device/os query or set array with all possible values
-  // const deviceQuery = req.query.device ? req.query.device.split(',') : [0, 1, 2, 3, 4, 5];
-  // const osQuery = req.query.os ? req.query.os.split(',') : [0, 1, 2, 3, 4, 5, 6];
+  const deviceQuery = req.query.device ? req.query.device.split(',') : [0, 1, 2, 3, 4, 5];
+  const osQuery = req.query.os ? req.query.os.split(',') : [0, 1, 2, 3, 4, 5, 6];
 
   knex('visits')
     .select('user')
+    .whereIn('device', deviceQuery)
+    .whereIn('os', osQuery)
     .distinct('user')
     .count('user')
     .groupBy('user')
