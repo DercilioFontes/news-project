@@ -65,7 +65,7 @@ app.get('/loyal-users', (req, res) => {
     .distinct('user')
     .count('user')
     .groupBy('user')
-    .having(knex.raw('count(user) > 2'))
+    .having(knex.raw('count(user) > 9'))
     .count()
     .then((result) => {
       res.send(JSON.stringify({ count: result.length}));
