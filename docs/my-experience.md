@@ -47,6 +47,9 @@ https://medium.com/@HalahSalih/project-settings-for-an-express-app-with-knex-169
 
 http://www.dancorman.com/knex-your-sql-best-friend/
 
+Count having > 10
+https://github.com/tgriesser/knex/issues/1468
+
 ## PostgreSQL (pg)
 
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546

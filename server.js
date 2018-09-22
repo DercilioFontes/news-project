@@ -34,17 +34,39 @@ app.get('/', (req, res) => {
 });
 
 // GET /unique-users
+// Ex: http://0.0.0.0:8080/unique-users?device=1,2&os=1,2
 app.get('/unique-users', (req, res) => {
+
+  // Check if there is device/os query or set array with all possible values
+  const deviceQuery = req.query.device ? req.query.device.split(',') : [0, 1, 2, 3, 4, 5];
+  const osQuery = req.query.os ? req.query.os.split(',') : [0, 1, 2, 3, 4, 5, 6];
+
   knex('visits')
     .countDistinct('user')
+    .whereIn('device', deviceQuery)
+    .whereIn('os', osQuery)
     .then((result) => {
-      res.send(JSON.stringify(result));
+      res.send(JSON.stringify(result[0]));
     });
 });
 
-// GET /unique-users
+// GET /loyal-users
+// Ex: http://0.0.0.0:8080/loyal-users?device=1&os=2
 app.get('/loyal-users', (req, res) => {
-  res.send('loyal-users route')
+
+  // Check if there is device/os query or set array with all possible values
+  // const deviceQuery = req.query.device ? req.query.device.split(',') : [0, 1, 2, 3, 4, 5];
+  // const osQuery = req.query.os ? req.query.os.split(',') : [0, 1, 2, 3, 4, 5, 6];
+
+  knex('visits')
+    .select('user')
+    .distinct('user')
+    .count('user')
+    .groupBy('user')
+    .having(knex.raw('count(user) > 2'))
+    .then((result) => {
+      res.send(JSON.stringify(result));
+    });
 });
 
 
