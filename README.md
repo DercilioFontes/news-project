@@ -64,9 +64,10 @@ Clone from [news-project](https://github.com/DercilioFontes/news-project)
 
 `$ npm install`
 
-`$ npm start`
-
 `$ knex migrate:latest`
 
 `$ knex seed:run`
 
+`$ npm start`
+
+Obs: In case of having to install PostgreSQL, follow the references above.
