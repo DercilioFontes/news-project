@@ -66,3 +66,7 @@ Clone from [news-project](https://github.com/DercilioFontes/news-project)
 
 `$ npm start`
 
+`$ knex migrate:latest`
+
+`$ knex seed:run`
+
