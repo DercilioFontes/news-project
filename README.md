@@ -12,11 +12,15 @@ I used [Node.js documentation](https://nodejs.org/api/stream.html) and others tu
 
 ## Struggling to work with big dataset
 
-The process of all the dataset takes a long time. So, I decided to work initialy only with 10 and 1000 rows, and to try a solution for big dataset later. I suppose this is the reason for to be horizontal scalable. I understood that it is the connection of other server to share the processing of the file ([Link](https://stackoverflow.com/questions/11707879/difference-between-scaling-horizontally-and-vertically-for-databases)). Unfortunately, there was no time left for me to try to implement something.
+The process of all the dataset takes a long time. So, I decided to work initialy only with 10 and 1000 rows, and to try a solution for a big dataset later. Unfortunately, there was no time left for me to try to implement something.
+
+## Horizontal scalable
+
+I understood that it is the connection of other server to share the processing of the file ([Link](https://stackoverflow.com/questions/11707879/difference-between-scaling-horizontally-and-vertically-for-databases)). I put that requirements as the latest one to work with.
 
 ## Wrong initial approach
 
-I tried to work with a NoSQL DB (Firebase) inicially. Package [firebase-admin](https://www.npmjs.com/package/firebase-admin) `npm install --save firebase-admin`. I was thinking that it could be for have the unique users and its informations. But this gave me issues to make the queries for device and os. So I decide change for SQL DB.
+I tried to work with a NoSQL DB (Firebase) inicially. Package [firebase-admin](https://www.npmjs.com/package/firebase-admin) `npm install --save firebase-admin`. I was thinking that it could be a good option for have the unique users and its informations. But this gave me issues to make the queries for device and os. So I decide change to SQL DB.
 
 ## Knex
 
@@ -32,7 +36,7 @@ Some references:
 
 ## PostgreSQL
 
-With PostgreSQL. I have to install PostgreSQL in my machine and I have some issues with knex for run and for connection, but it works in the end. But I have the same issues in the Docker container, but I didn't have more time to solve it. Something envolved with to run knex in the CLI. So I couldn't migrate and seed my DB. 
+With PostgreSQL. I have to install PostgreSQL in my machine and I have some issues with knex to run and to connect them, but it works in the end. But I have the same issues in the Docker container, but I didn't have more time to solve it. Something envolved with running knex in the CLI. So I couldn't migrate and seed my DB. 
 
 [Postgres Guide](http://postgresguide.com/utilities/psql.html)
 
@@ -44,11 +48,11 @@ Issue: [knex CLI command not working](https://github.com/tgriesser/knex/issues/1
 
 ## Loyal User
 
-I worked first assuming that the dataset is only from a month. I didn't have time for work assuming that there are many months inside and make queries/code for check 10 or more visits/month in a different interval of time.
+I worked first assuming that the dataset is only from a month. I didn't have time for work assuming that there are many months inside and making queries/code for check 10 or more visits/month in a different interval of time.
 
 ## Docker
 
-It's my first contact with Docker. Not so bad. Only the issue with knex for working in it. However, I couldn't seed my data there.
+It's my first contact with Docker. Not so bad. Only the issue with knex to work in it. However, I couldn't seed my data there.
 
 I used this [Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/) for Node.js to get into Docker.
 
